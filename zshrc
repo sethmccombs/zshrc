@@ -112,11 +112,12 @@ source $ZSH/oh-my-zsh.sh
 # 2. PATH config
 # ---------------
 
-export PATH=/Users/seth/Library/Python/3.6/bin:/usr/local/bin/python3.6:$PATH # added python for AWS CLI
-export PYTHONPATH=.:"${PYTHONPATH}":$PATH # Python Path in Current DIR (Laputrop Bug)
+export PATH=/usr/local/bin/python3.6:/usr/local/bin/apache-maven-3.5.4/bin:$HOME/.linkerd2/bin:$PATH # added python for AWS CLI
+#export PATH=/Users/seth/Library/Python/3.6/bin:/usr/local/bin/python3.6:$PATH # added python for AWS CLI
+export PYTHONPATH=.:"${PYTHONPATH}" # Python Path in Current DIR (Laputrop Bug)
+export GOPATH=$HOME/Code/go
 
-
-# ---------------
+ #---------------
 # 3. BREW completion
 # ---------------
 
@@ -139,3 +140,29 @@ else
 Echo "no file found"
 fi
 
+# -----------------
+#   5. Node Config
+# ------------------
+
+
+#export NVM_DIR=~/.nvm
+#source $(brew --prefix nvm)/nvm.sh
+
+# -----------------
+#   Kubectl Alias 
+# ------------------
+
+alias k1='kubectl --context=ops1'
+alias k2='kubectl --context=o2'
+alias k3='kubectl --context=ops3'
+alias ho2='helm --kube-context=o2'
+alias ka1='kubectl --context=ops1 get --all-namespaces'
+alias ka2='kubectl --context=o2 get --all-namespaces'
+alias ka3='kubectl --context=ops3 get --all-namespaces'
+alias k='kubectl'
+
+
+
+eval "$(rbenv init -)"
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
