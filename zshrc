@@ -116,6 +116,7 @@ export PATH=/usr/local/bin/python3.6:/usr/local/bin/apache-maven-3.5.4/bin:$HOME
 #export PATH=/Users/seth/Library/Python/3.6/bin:/usr/local/bin/python3.6:$PATH # added python for AWS CLI
 export PYTHONPATH=.:"${PYTHONPATH}" # Python Path in Current DIR (Laputrop Bug)
 export GOPATH=$HOME/Code/go
+export GOBIN=/Users/seth/code/go/bin
 
  #---------------
 # 3. BREW completion
